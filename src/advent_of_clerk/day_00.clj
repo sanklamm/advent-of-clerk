@@ -4,3 +4,6 @@
 
 ;; This file is meant to be deleted when you start. It only exists to
 ;; demo that files with contents are included in the build.
+
+(+ 1 1)
+
