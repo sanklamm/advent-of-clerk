@@ -15,6 +15,8 @@
        (remove (comp empty? first))
        (map #(map parse-long %))))
 
+(parse (utils/read-lines data))
+
 ;; part 1
 (->> (utils/read-lines data)
      parse
