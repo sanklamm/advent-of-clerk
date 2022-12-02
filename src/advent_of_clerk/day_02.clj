@@ -32,23 +32,23 @@
 
 (defn parse [lines]
  (->> lines
-      (map #(str/split % #" "))
-      (map #(map keyword %))))
+      (mapv #(str/split % #" "))
+      (mapv #(mapv keyword %))))
 
 (parse (utils/read-lines data))
 
 (defn part-1 [input]
   (->> input
-       (map #(get-score-1 %))
+       (mapv #(get-score-1 %))
        (apply +)))
 
 (defn part-2 [input]
   (->> input
-       (map #(get-score-2 %))
+       (mapv #(get-score-2 %))
        (apply +)))
 
-(part-1 (parse (utils/read-lines data)))
+(time (part-1 (parse (utils/read-lines data))))
 ;; => 10404
 
-(part-2 (parse (utils/read-lines data)))
+(time (part-2 (parse (utils/read-lines data))))
 ;; => 10334
