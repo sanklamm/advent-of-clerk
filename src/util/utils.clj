@@ -32,3 +32,6 @@
 
 (defn read-longs [file]
   (map parse-long (read-lines file)))
+
+(defn transpose [m]
+  (apply mapv vector m))

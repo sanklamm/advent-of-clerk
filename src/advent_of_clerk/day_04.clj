@@ -1,4 +1,5 @@
 ;; # 🎄 Advent of Clerk: Day 4
+{:nextjournal.clerk/visibility {:code :hide :result :hide}}
 (ns advent-of-clerk.day-04
   (:require [nextjournal.clerk :as clerk]
             [util.utils :as utils]
@@ -10,6 +11,7 @@
 (utils/get-input-data day)
 
 (def data (str "input-" day ".txt"))
+{:nextjournal.clerk/visibility {:code :show :result :show}}
 
 (defn str-range->set [s]
   (let [parts (str/split s #"-")]
